@@ -9,6 +9,19 @@ img = new Image;
 ctx.strokeStyle = 'black';
 
 img.onload = start;
+for (i=0; i<15; i++){
+  if (i==4){
+    img.src = "img/partes_motor_combustao/4,5.png"
+  }
+  else if (i==5){
+    continue
+  }
+  else {
+    img.src = "img/partes_motor_combustao/"+i+".png"
+    console.log(i)
+  }
+
+}
 img.src = 'img/partes_motor_combustao/0.png';
 function start() {
 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
