@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="css/w3.css">
 <title>Bat@t-eiros</title>
 
-<head>
+</head>
 
 <body>
 <!-- NAVBAR -->
@@ -19,9 +19,9 @@
         <div class="w3-dropdown-hover w3-white">
           <a href="#motores" class="w3-button">Motores</a>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="#" class="w3-bar-item w3-button">Elétrico</a>
-              <a href="#" class="w3-bar-item w3-button">Combustão</a>
-              <a href="#" class="w3-bar-item w3-button">Hidrogénio</a>
+              <a href="#motores" onclick="changeEletrico();"class="w3-bar-item w3-button">Elétrico</a>
+              <a href="#motores" onclick="changeCombustao();"class="w3-bar-item w3-button">Combustão</a>
+              <a href="#motores" onclick="changeHidrogenio();"class="w3-bar-item w3-button">Hidrogénio</a>
             </div>
           </div>
         <div class="w3-dropdown-hover w3-white">
@@ -39,13 +39,16 @@
 
   <!-- SLIDESHOW -->
   <div id="home"class="w3-content w3-display-container">
-    <img class="mySlides" src="img/motor_eletrico.jpg" style="width:100%">
-    <img class="mySlides" src="img/motor_combustao.jpg" style="width:100%">
-    <img class="mySlides" src="img/motor_hidrogenio.png" style="width:100%">
+    <div id="motor_eletrico" class="w3-display-middle">
+      <img class="mySlides w3-animate-left" src="img/motor_eletrico.jpg" style="width:980px;height:652.683px;">
+      <img class="mySlides w3-animate-left" src="img/motor_combustao.jpg" style="width:980px;height:652.683px;">
+      <img class="mySlides w3-animate-left" src="img/motor_hidrogenio.png" style="width:980px;height:652.683px;">
 
-    <button class="w3-button w3-black w3-display-left w3-large" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-black w3-display-right w3-large" onclick="plusDivs(1)">&#10095;</button>
-    <button id="button" class="w3-button w3-display-middle w3-grey w3-text-white w3-round-xxlarge w3-xxlarge" style="opacity:50%" onmouseover="mouseOver()" onmouseout="mouseOut()"><b>Ver Mais</b></button>
+    </div>
+
+    <button class="w3-button w3-black w3-display-left w3-large" onclick="plusDivs(-1);changeDirection(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right w3-large" onclick="plusDivs(1);changeDirection(1);">&#10095;</button>
+    <button id="button" class="w3-button w3-display-middle w3-grey w3-text-white w3-round-xxlarge w3-xxlarge" style="opacity:50%" onclick="verMais();" onmouseover="mouseOver()" onmouseout="mouseOut()"><b>Ver Mais</b></button>
   </div>
 
 <!-- START CONTENT -->
@@ -55,6 +58,44 @@
       <!-- Motores Section -->
     <div class="w3-container w3-padding-32" id="motores">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Motores</h3>
+
+      <div class="w3-bar w3-padding-16">
+      <button class="w3-bar-item w3-button w3-teal motor-btn" style="width:33.3%">Elétrico</button>
+      <button class="w3-bar-item w3-button w3-teal motor-btn" style="width:33.3%">Combustão</button>
+      <button class="w3-bar-item w3-button w3-teal motor-btn" style="width:33.3%">Hidrogénio</button>
+    </div>
+
+
+
+      <div id="canvas-container">
+          <div class="w3-animate-opacity">
+              <canvas id="canvas"></canvas>
+          </div>
+
+      </div>
+
+      <div id="eletrico">
+        <div class="w3-center">
+          <div class="w3-animate-opacity">
+            <p style="font-size:20px;"> por a informacao aqui </p>
+            <img src="img/motor_eletrico.jpg" alt="motor eletrico">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="hidrogenio">
+          <div class="w3-center">
+            <div class="w3-animate-opacity">
+              <p style="font-size:20px;"> por a informacao aqui </p>
+              <img src="img/motor_hidrogenio.png" alt="motor hidrogenio">
+            </div>
+          </div>
+
+      </div>
+
+
     </div>
 
     <!-- Modelos Section -->
@@ -71,4 +112,5 @@
 </body>
 
 <script src="js/main.js" charset="utf-8"></script>
+<script src="js/canvas.js" charset="utf-8"></script>
 </html>
