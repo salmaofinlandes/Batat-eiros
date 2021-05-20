@@ -18,10 +18,13 @@ for (i=0; i<15; i++){
   }
   else {
     img.src = "img/partes_motor_combustao/"+i+".png"
-    console.log(i)
+
+  }
+console.log(i)
+ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   }
 
-}
+
 img.src = 'img/partes_motor_combustao/0.png';
 function start() {
 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
