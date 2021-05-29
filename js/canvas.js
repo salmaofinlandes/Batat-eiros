@@ -220,7 +220,7 @@ check(getCursorPosition(canvas, event)[0],getCursorPosition(canvas, event)[1],14
 function check(x,y,n){
 if (ctx.isPointInPath(x,y)){
 //document.getElementById("p").innerHTML = n;
-  img.src = '/home/mateus/Batat-eiros/img/partes_motor_combustao/'+n+'.png';
+  img.src = 'img/partes_motor_combustao/'+n+'.png';
   updateLegenda(n)
 }
 }
