@@ -263,7 +263,7 @@ html{
 }
 
 canvas {
-outline: black 3px solid;
+/*outline: black 3px solid;*/
 display: inline;
 }
 
