@@ -9,23 +9,7 @@ img = new Image;
 ctx.strokeStyle = 'black';
 
 img.onload = start;
-for (i=0; i<15; i++){
-  if (i==4){
-    img.src = "img/partes_motor_combustao/4,5.png"
-  }
-  else if (i==5){
-    continue
-  }
-  else {
-    img.src = "img/partes_motor_combustao/"+i+".png"
-
-  }
-console.log(i)
-ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-  }
-
-
-img.src = 'img/partes_motor_combustao/0.png';
+img.src = '/home/mateus/Batat-eiros/img/partes_motor_combustao/0.png';
 function start() {
 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 canvas.onmousemove = updateLine;
@@ -236,7 +220,8 @@ check(getCursorPosition(canvas, event)[0],getCursorPosition(canvas, event)[1],14
 function check(x,y,n){
 if (ctx.isPointInPath(x,y)){
 //document.getElementById("p").innerHTML = n;
-  img.src = 'img/partes_motor_combustao/'+n+'.png';
+  img.src = '/home/mateus/Batat-eiros/img/partes_motor_combustao/'+n+'.png';
+  updateLegenda(n)
 }
 }
 
@@ -261,5 +246,25 @@ getCursorPosition(canvas, e);
 
 })
 
+function updateLegenda(n){
+  var legenda = document.getElementById("motor_legenda")
 
+
+  if(n==1){legenda.innerHTML = "<p><b>1.Cabeça do motor -</b> É a “tampa” do motor, que fecha a parte de cima dos cilindros, a árvore de cames e as válvulas.</p>"}
+  else if(n==2){legenda.innerHTML ="<p><b>2.Árvore de cames -</b> Peça cilíndrica de aço com peças ovais (cames) que acionam as válvulas de admissão e escape. As cames tornam o movimento rotativo das árvores de cames num movimento vertical das válvulas.</p>"}
+  else if(n==3){legenda.innerHTML ="<p><b>3.Engrenagem da árvore de cames -</b> Mantém o tempo de cada uma das fases de funcionamento do motor, permitindo com que as válvulas estejam no mesmo curso que os pistões, dado que esta engrenagem está ligada, por meio de uma corrente, a uma engrenagem da cambota.</p>"}
+  else if(n=="4,5"){legenda.innerHTML ="<p><b>4.Cobertura da frente -</b> Proteger os componentes essenciais do motor e também serve como suporte para acessórios, como por exemplo a bomba de água.<br><b>5.Bomba de óleo -</b> A sua função é retirar o óleo do cárter e pressurizá-lo no bloco do motor de modo que este seja distribuído pelas diferentes partes do motor.</p>"}
+  else if(n==6){legenda.innerHTML ="<p><b>6.Biela -</b> Haste que liga o pistão à cambota.</p>"}
+  else if(n==7){legenda.innerHTML ="<p><b>7.Pistão -</b> É uma peça cilíndrica fechada na parte de cima e aberta na parte de baixo. É uma das principais peças do motor de um carro, com a função de comprimir a mistura de ar/combustível para ser queimada na combustão e fazer rodar a cambota.</p>"}
+  else if(n==8){legenda.innerHTML ="<p><b>8.Cambota -</b> Eixo metálico, que se encontra em rotação, ao qual as bielas estão conectadas.</p>"}
+  else if(n==9){legenda.innerHTML ="<p><b>9.Cárter de óleo -</b> Reservatório de óleo.</p>"}
+  else if(n==10){legenda.innerHTML ="<p><b>10.Volante do motor -</b> Serve para manter o equilíbrio das massas do motor nos intervalos das explosões dos cilindros, ou seja, manter o intervalo de tempo entre tempos sempre constante.</p>"}
+  else if(n==11){legenda.innerHTML ="<p><b>11.Termostato -</b> Indica a temperatura do óleo e do motor.</p>"}
+  else if(n==12){legenda.innerHTML ="<p><b>12.Bloco dos cilindros -</b> É a localização dos pistões e da câmara de explosões.</p>"}
+  else if(n==13){legenda.innerHTML ="<p><b>13.Cabeça dos cilindros -</b> Contém a árvore de cames, válvulas, molas de retorno das válvulas, velas de ignição e injetores (para motores de injeção direta). Para além disso, também passa o líquido de refrigeração nos canais localizados nesta peça.</p>"}
+  else if(n==14){legenda.innerHTML ="<p><b>14.Mecanismo das válvulas -</b> Este mecanismo é constituído principalmente pelas molas de retorno da válvulas, que permite que a haste da válvula seja puxada para baixo, fazendo com que ela se abra. Esta mola acoplada na haste também faz com que a válvula se feche posteriormente, completando o ciclo. É importante realçar que esse movimento deve ser sincronizado com o tempo em curso.</p>"}
+
+
+
+}
 }

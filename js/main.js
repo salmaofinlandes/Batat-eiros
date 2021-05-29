@@ -79,6 +79,7 @@ function changeEletrico(){
   document.getElementById("hidrogenio").style.display="none";
   document.getElementById("canvas-container").style.display="none";
   document.getElementById("eletrico").style.display="block";
+  document.getElementById("motores").scrollIntoView();
 
 }
 
@@ -89,8 +90,8 @@ function changeCombustao(){
   hidrogenio.style.opacity=0.4;
   document.getElementById("hidrogenio").style.display="none";
   document.getElementById("eletrico").style.display="none";
-  document.getElementById("canvas-container").style.display="block";
-
+  document.getElementById("canvas-container").style.display="table";
+  document.getElementById("motores").scrollIntoView();
 }
 
 function changeHidrogenio(){
@@ -101,7 +102,7 @@ function changeHidrogenio(){
   document.getElementById("eletrico").style.display="none";
   document.getElementById("canvas-container").style.display="none";
   document.getElementById("hidrogenio").style.display="block";
-
+  document.getElementById("motores").scrollIntoView();
 
 }
 
