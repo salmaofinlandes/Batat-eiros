@@ -9,7 +9,7 @@ img = new Image;
 ctx.strokeStyle = 'black';
 
 img.onload = start;
-img.src = '/home/mateus/Batat-eiros/img/partes_motor_combustao/0.png';
+img.src = 'img/partes_motor_combustao/0.png';
 function start() {
 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 canvas.onmousemove = updateLine;
