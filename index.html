@@ -23,17 +23,19 @@
               <a href="#motores" onclick="changeEletrico();"class="w3-bar-item w3-button">Elétrico</a>
               <a href="#motores" onclick="changeCombustao();"class="w3-bar-item w3-button">Combustão</a>
               <a href="#motores" onclick="changeHidrogenio();"class="w3-bar-item w3-button">Hidrogénio</a>
+              <a href="#comparacoes" class="w3-bar-item w3-button">Comparações</a>
             </div>
           </div>
         <div class="w3-dropdown-hover w3-white">
           <a href="#modelos" class="w3-button">Modelos</a>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="#modelos" class="w3-bar-item w3-button">Carro a Bateria Lítio</a>
-              <a href="#modelos" class="w3-bar-item w3-button">Carro a Batatas</a>
-              <a href="#modelos" class="w3-bar-item w3-button">O nosso Motor</a>
+              <a href="#modelos" class="w3-bar-item w3-button" onclick="changeLitio();">Carro a Bateria Lítio</a>
+              <a href="#modelos" class="w3-bar-item w3-button" onclick="changeBatata();">Carro a Batatas</a>
+              <a href="#modelos" class="w3-bar-item w3-button" onclick="changeNossoMotor();">O nosso Motor</a>
             </div>
           </div>
 
+      <a href="#galeria" class="w3-bar-item w3-button">Galeria</a>
       <a href="#sobre" class="w3-bar-item w3-button">Sobre Nós</a>
     </div>
     </div>
@@ -69,7 +71,8 @@
 
 
 
-      <div id="canvas-container" class="w3-cell-row">
+      <div id="canvas-container">
+        <div class="w3-cell-row">
           <div class="w3-container w3-cell" style="width:60%;">
             <div class="w3-animate-opacity">
                 <canvas id="canvas" width="735" height="744"></canvas>
@@ -78,76 +81,82 @@
           <div id="motor_legenda" class="w3-container w3-cell w3-cell-middle w3-animate-opacity" style="width:40%">
             <p><i>Passa com o rato sobre as várias partes do motor para descobrires a sua função.</i></p>
           </div>
+        </div>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Funcionamento do motor a combustão (resumo):</strong></u></p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Sabemos que a gasolina e o oxigénio formam uma mistura explosiva, e o princípio básico de um motor a combustão é transformar esta energia explosiva em movimento. Para conter as explosões o motor usa um cilindro, e dentro deste, temos um pistão, que desliza para cima e para baixo. Dentro deste cilindro, uma faísca elétrica incendeia a mistura de ar e gasolina comprimida e puxa os pistões para baixo. Os pistões, por sua vez, estão conectados a um eixo de metal (cambota), que transforma o movimento vertical dos pistões num movimento rotativo. Esta cambota está ligada a um outro eixo ligado às rodas, que as põe em movimento.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">No topo do cilindro temos as válvulas, que deixam entrar a mistura de gasolina e ar. Para maior produção de energia e suavidade, os motores modernos têm um número de pistões ligados a apenas uma cambota. A gasolina que está no tanque é puxada pela bomba do combustível até ao carburador (no caso de o carro não ter injeção direta), pelas linhas de combustível. O carburador mistura a gasolina com o ar para formar a mistura explosiva que faz mexer os pistões. Existe uma conexão entre uma válvula no carburador e o pedal do acelerador. Assim que carregamos no acelerador, esta válvula abre mais, permitindo que entre também mais mistura de gasolina e ar, aumentando a velocidade do motor. Levantar o pé do acelerador tem o efeito oposto, a válvula fecha um pouco e limita a quantidade de mistura que entra no motor, fazendo o motor desacelerar.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">A parte elétrica do motor fornece a faísca que incendeia o combustível no cilindro. À medida que a cambota roda, existe um gerador que aproveita a energia rotacional do motor e mantém a bateria do carro carregada. A bateria por sua vez, dá energia a uma bobine que aumenta a voltagem até ser suficiente para produzir uma faísca, que é enviada pelo distribuidor para as velas de ignição localizadas no cilindro. O distribuidor envia a corrente elétrica para uma vela de ignição específica num tempo específico. Dentro dele temos um rotor que ao rodar toca numa série de contactos ligados a cada uma das velas de ignição.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"></p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"></p>
       </div>
-
 
       <div id="eletrico">
         <div class="w3-center">
           <div class="w3-animate-opacity">
             <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Hoje em dia, os motores el&eacute;tricos podem ser encontrados em v&aacute;rios dispositivos do dia-a-dia. Aqueles que usam motores de corrente cont&iacute;nua (DC) t&ecirc;m fun&ccedil;&otilde;es bastante b&aacute;sicas. O motor est&aacute; conectado diretamente a uma fonte de energia e a sua velocidade de rota&ccedil;&atilde;o depende diretamente da intensidade da corrente. Embora f&aacute;ceis de produzir, estes motores el&eacute;tricos n&atilde;o atendem aos requisitos de pot&ecirc;ncia, fiabilidade ou tamanho de um ve&iacute;culo el&eacute;trico, embora seja poss&iacute;vel encontr&aacute;-los nos limpa para-brisas, janelas e outros mecanismos mais pequenos dentro do carro.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>O estator e o rotor:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Se quiser entender como funciona um ve&iacute;culo el&eacute;trico, &eacute; preciso estar familiarizado com os elementos f&iacute;sicos de um motor el&eacute;trico. Isto come&ccedil;a com a compreens&atilde;o dos princ&iacute;pios das suas duas partes principais: o estator e o rotor. A diferen&ccedil;a entre os dois &eacute; f&aacute;cil de lembrar: o estator &eacute; est&aacute;tico, enquanto o rotor gira. Num motor, o estator usa energia para criar um campo magn&eacute;tico que gira o rotor.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Ent&atilde;o, como funciona um motor quando se trata de alimentar um ve&iacute;culo el&eacute;trico? Para isso devemos recorrer aos motores de corrente alternada (AC), que requerem a utiliza&ccedil;&atilde;o de um circuito de convers&atilde;o para transformar a corrente cont&iacute;nua (DC) fornecida pela bateria. Vamos ver mais de perto os dois tipos diferentes de corrente.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Alimenta&ccedil;&atilde;o de um ve&iacute;culo el&eacute;trico: AC vs. DC:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Para percebermos melhor como funciona um carro el&eacute;trico, &eacute; tamb&eacute;m necess&aacute;rio saber a diferen&ccedil;a entre AC e DC (correntes de eletr&otilde;es). A eletricidade passa por um condutor de duas maneiras. A corrente alternada (AC) descreve uma corrente el&eacute;trica na qual os eletr&otilde;es mudam de dire&ccedil;&atilde;o periodicamente. A corrente cont&iacute;nua (DC), como o pr&oacute;prio nome sugere, flui em apenas uma &uacute;nica dire&ccedil;&atilde;o. A bateria num carro el&eacute;trico funciona usando corrente cont&iacute;nua. Mas, no que diz respeito ao motor principal do ve&iacute;culo el&eacute;trico (que fornece tra&ccedil;&atilde;o ao ve&iacute;culo), essa energia DC deve ser transformada em AC atrav&eacute;s de um conversor.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Ent&atilde;o, o que acontece quando essa energia chega ao motor? Isso vai depender do facto de termos um ve&iacute;culo que use um motor s&iacute;ncrono ou ass&iacute;ncrono.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Tipos de motor el&eacute;trico:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Existem dois tipos de motores de corrente alternada na ind&uacute;stria automobil&iacute;stica: motores s&iacute;ncronos e motores ass&iacute;ncronos. Quando se trata de um ve&iacute;culo el&eacute;trico, os motores s&iacute;ncronos e ass&iacute;ncronos t&ecirc;m os seus pr&oacute;prios pontos fortes - um n&atilde;o &eacute; necessariamente melhor que o outro.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Motores s&iacute;ncronos e ass&iacute;ncronos:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Um motor ass&iacute;ncrono, tamb&eacute;m chamado de motor de indu&ccedil;&atilde;o, depende do estator el&eacute;trico para gerar um campo magn&eacute;tico girat&oacute;rio. Isto, ent&atilde;o, puxa o rotor para uma persegui&ccedil;&atilde;o sem fim, como se o rotor estivesse sempre a tentar alcan&ccedil;ar o campo magn&eacute;tico sem nunca o conseguir. Um motor ass&iacute;ncrono &eacute; frequentemente usado em ve&iacute;culos el&eacute;tricos que s&atilde;o feitos para ser conduzidos a grandes velocidades por longos per&iacute;odos de tempo.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Num motor s&iacute;ncrono, o rotor atua como um eletro&iacute;man, participando ativamente na cria&ccedil;&atilde;o do campo magn&eacute;tico. A sua velocidade de rota&ccedil;&atilde;o &eacute;, portanto, diretamente proporcional &agrave; frequ&ecirc;ncia da corrente que alimenta o motor. Isto torna um motor s&iacute;ncrono ideal para a condu&ccedil;&atilde;o urbana, o que normalmente requer paragens regulares e arranques a baixas velocidades.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Os motores s&iacute;ncronos e ass&iacute;ncronos tamb&eacute;m funcionam de maneira contr&aacute;ria, o que significa que podem converter energia mec&acirc;nica em eletricidade durante a travagem. Este &eacute; o princ&iacute;pio da travagem regenerativa, que deriva do alternador.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Partes de motores el&eacute;tricos:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Vamos agora ver algumas das diferentes pe&ccedil;as encontradas no motor de um ve&iacute;culo el&eacute;trico: Desde &iacute;manes de motor el&eacute;trico de Motores S&iacute;ncronos Excitados Externamente (MSEE) &agrave; unidade propuls&atilde;o em geral.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>&Iacute;manes permanentes:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Alguns motores s&iacute;ncronos usam um motor de &iacute;man permanente para o rotor. Esses &iacute;manes permanentes s&atilde;o embutidos no rotor de a&ccedil;o, criando um campo magn&eacute;tico constante. Um &iacute;man de motor el&eacute;trico permanente tem a vantagem de operar sem fonte de alimenta&ccedil;&atilde;o, mas requer o uso de metais ou ligas como o neod&iacute;mio ou o dispr&oacute;sio. Esses materiais raros s&atilde;o ferromagn&eacute;ticos, o que significa que podem ser magnetizados para se tornarem &iacute;manes permanentes. Estes s&atilde;o usados para v&aacute;rios fins industriais: desde geradores de turbinas e&oacute;licas, ferramentas sem fios e fones de ouvido, at&eacute; d&iacute;namos de bicicletas&hellip; E obviamente motores de ve&iacute;culos el&eacute;tricos.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">O problema &eacute; que os pre&ccedil;os desses materiais raros s&atilde;o muito vol&aacute;teis. Apesar do nome, eles n&atilde;o s&atilde;o necessariamente t&atilde;o raros, na verdade, mas s&atilde;o encontrados quase exclusivamente na China, que, portanto, tem quase um monop&oacute;lio sobre sua produ&ccedil;&atilde;o, venda e distribui&ccedil;&atilde;o. Isso explica o porqu&ecirc; de os fabricantes terem de trabalhar arduamente para encontrar solu&ccedil;&otilde;es alternativas para os motores de ve&iacute;culos el&eacute;tricos.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Motores s&iacute;ncronos excitados externamente:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Uma dessas solu&ccedil;&otilde;es, usada pela Renault para o Novo ZOE, envolve a constru&ccedil;&atilde;o de um &iacute;man de motor el&eacute;trico a partir de uma bobina de cobre. Isso requer um processo industrial mais complexo, mas torna poss&iacute;vel evitar problemas de abastecimento, ao mesmo tempo que mant&eacute;m uma excelente rela&ccedil;&atilde;o entre o peso do motor e o torque criado.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Guillaume Faurie, chefe de engenharia da f&aacute;brica da Renault Cl&eacute;on em Fran&ccedil;a, d&aacute; uma ideia da complexidade do motor do Novo ZOE: &ldquo;A fabrica&ccedil;&atilde;o de um MSEE requer processos de enrolamento e impregna&ccedil;&atilde;o de bobina espec&iacute;ficos. As restri&ccedil;&otilde;es das expectativas de desempenho do produto, o objetivo de reduzir a rela&ccedil;&atilde;o peso-pot&ecirc;ncia e a taxa r&aacute;pida de produ&ccedil;&atilde;o exigem que sejam empregues com efic&aacute;cia as tecnologias mais avan&ccedil;adas para realizar esses processos.&rdquo;</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
-<ul>
-    <li>
-        <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>A unidade de propuls&atilde;o el&eacute;trica:</strong></u></p>
-    </li>
-</ul>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Num ve&iacute;culo el&eacute;trico, o motor composto pelo rotor e pelo estator faz parte de uma unidade maior, a unidade de propuls&atilde;o el&eacute;trica, &eacute; um conjunto que faz funcionar o motor el&eacute;trico.</p>
-<p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Tamb&eacute;m dentro desta unidade, o Controlador Eletr&oacute;nico de Pot&ecirc;ncia (CEP) re&uacute;ne todos os elementos eletr&oacute;nicos de pot&ecirc;ncia respons&aacute;veis por gerir a fonte de alimenta&ccedil;&atilde;o do motor e o carregamento da bateria. Por &uacute;ltimo, este tamb&eacute;m inclui o redutor, que &eacute; a parte respons&aacute;vel por ajustar o torque e a velocidade de rota&ccedil;&atilde;o transmitida pelo motor &agrave;s rodas. Juntos, estes elementos fazem com que o motor el&eacute;trico funcione de maneira suave e eficiente.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>O estator e o rotor:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Se quiser entender como funciona um ve&iacute;culo el&eacute;trico, &eacute; preciso estar familiarizado com os elementos f&iacute;sicos de um motor el&eacute;trico. Isto come&ccedil;a com a compreens&atilde;o dos princ&iacute;pios das suas duas partes principais: o estator e o rotor. A diferen&ccedil;a entre os dois &eacute; f&aacute;cil de lembrar: o estator &eacute; est&aacute;tico, enquanto o rotor gira. Num motor, o estator usa energia para criar um campo magn&eacute;tico que gira o rotor.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Ent&atilde;o, como funciona um motor quando se trata de alimentar um ve&iacute;culo el&eacute;trico? Para isso devemos recorrer aos motores de corrente alternada (AC), que requerem a utiliza&ccedil;&atilde;o de um circuito de convers&atilde;o para transformar a corrente cont&iacute;nua (DC) fornecida pela bateria. Vamos ver mais de perto os dois tipos diferentes de corrente.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Alimenta&ccedil;&atilde;o de um ve&iacute;culo el&eacute;trico: AC vs. DC:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Para percebermos melhor como funciona um carro el&eacute;trico, &eacute; tamb&eacute;m necess&aacute;rio saber a diferen&ccedil;a entre AC e DC (correntes de eletr&otilde;es). A eletricidade passa por um condutor de duas maneiras. A corrente alternada (AC) descreve uma corrente el&eacute;trica na qual os eletr&otilde;es mudam de dire&ccedil;&atilde;o periodicamente. A corrente cont&iacute;nua (DC), como o pr&oacute;prio nome sugere, flui em apenas uma &uacute;nica dire&ccedil;&atilde;o. A bateria num carro el&eacute;trico funciona usando corrente cont&iacute;nua. Mas, no que diz respeito ao motor principal do ve&iacute;culo el&eacute;trico (que fornece tra&ccedil;&atilde;o ao ve&iacute;culo), essa energia DC deve ser transformada em AC atrav&eacute;s de um conversor.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Ent&atilde;o, o que acontece quando essa energia chega ao motor? Isso vai depender do facto de termos um ve&iacute;culo que use um motor s&iacute;ncrono ou ass&iacute;ncrono.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Tipos de motor el&eacute;trico:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Existem dois tipos de motores de corrente alternada na ind&uacute;stria automobil&iacute;stica: motores s&iacute;ncronos e motores ass&iacute;ncronos. Quando se trata de um ve&iacute;culo el&eacute;trico, os motores s&iacute;ncronos e ass&iacute;ncronos t&ecirc;m os seus pr&oacute;prios pontos fortes - um n&atilde;o &eacute; necessariamente melhor que o outro.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Motores s&iacute;ncronos e ass&iacute;ncronos:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Um motor ass&iacute;ncrono, tamb&eacute;m chamado de motor de indu&ccedil;&atilde;o, depende do estator el&eacute;trico para gerar um campo magn&eacute;tico girat&oacute;rio. Isto, ent&atilde;o, puxa o rotor para uma persegui&ccedil;&atilde;o sem fim, como se o rotor estivesse sempre a tentar alcan&ccedil;ar o campo magn&eacute;tico sem nunca o conseguir. Um motor ass&iacute;ncrono &eacute; frequentemente usado em ve&iacute;culos el&eacute;tricos que s&atilde;o feitos para ser conduzidos a grandes velocidades por longos per&iacute;odos de tempo.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Num motor s&iacute;ncrono, o rotor atua como um eletro&iacute;man, participando ativamente na cria&ccedil;&atilde;o do campo magn&eacute;tico. A sua velocidade de rota&ccedil;&atilde;o &eacute;, portanto, diretamente proporcional &agrave; frequ&ecirc;ncia da corrente que alimenta o motor. Isto torna um motor s&iacute;ncrono ideal para a condu&ccedil;&atilde;o urbana, o que normalmente requer paragens regulares e arranques a baixas velocidades.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Os motores s&iacute;ncronos e ass&iacute;ncronos tamb&eacute;m funcionam de maneira contr&aacute;ria, o que significa que podem converter energia mec&acirc;nica em eletricidade durante a travagem. Este &eacute; o princ&iacute;pio da travagem regenerativa, que deriva do alternador.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Partes de motores el&eacute;tricos:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Vamos agora ver algumas das diferentes pe&ccedil;as encontradas no motor de um ve&iacute;culo el&eacute;trico: Desde &iacute;manes de motor el&eacute;trico de Motores S&iacute;ncronos Excitados Externamente (MSEE) &agrave; unidade propuls&atilde;o em geral.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>&Iacute;manes permanentes:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Alguns motores s&iacute;ncronos usam um motor de &iacute;man permanente para o rotor. Esses &iacute;manes permanentes s&atilde;o embutidos no rotor de a&ccedil;o, criando um campo magn&eacute;tico constante. Um &iacute;man de motor el&eacute;trico permanente tem a vantagem de operar sem fonte de alimenta&ccedil;&atilde;o, mas requer o uso de metais ou ligas como o neod&iacute;mio ou o dispr&oacute;sio. Esses materiais raros s&atilde;o ferromagn&eacute;ticos, o que significa que podem ser magnetizados para se tornarem &iacute;manes permanentes. Estes s&atilde;o usados para v&aacute;rios fins industriais: desde geradores de turbinas e&oacute;licas, ferramentas sem fios e fones de ouvido, at&eacute; d&iacute;namos de bicicletas&hellip; E obviamente motores de ve&iacute;culos el&eacute;tricos.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">O problema &eacute; que os pre&ccedil;os desses materiais raros s&atilde;o muito vol&aacute;teis. Apesar do nome, eles n&atilde;o s&atilde;o necessariamente t&atilde;o raros, na verdade, mas s&atilde;o encontrados quase exclusivamente na China, que, portanto, tem quase um monop&oacute;lio sobre sua produ&ccedil;&atilde;o, venda e distribui&ccedil;&atilde;o. Isso explica o porqu&ecirc; de os fabricantes terem de trabalhar arduamente para encontrar solu&ccedil;&otilde;es alternativas para os motores de ve&iacute;culos el&eacute;tricos.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Motores s&iacute;ncronos excitados externamente:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Uma dessas solu&ccedil;&otilde;es, usada pela Renault para o Novo ZOE, envolve a constru&ccedil;&atilde;o de um &iacute;man de motor el&eacute;trico a partir de uma bobina de cobre. Isso requer um processo industrial mais complexo, mas torna poss&iacute;vel evitar problemas de abastecimento, ao mesmo tempo que mant&eacute;m uma excelente rela&ccedil;&atilde;o entre o peso do motor e o torque criado.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Guillaume Faurie, chefe de engenharia da f&aacute;brica da Renault Cl&eacute;on em Fran&ccedil;a, d&aacute; uma ideia da complexidade do motor do Novo ZOE: &ldquo;A fabrica&ccedil;&atilde;o de um MSEE requer processos de enrolamento e impregna&ccedil;&atilde;o de bobina espec&iacute;ficos. As restri&ccedil;&otilde;es das expectativas de desempenho do produto, o objetivo de reduzir a rela&ccedil;&atilde;o peso-pot&ecirc;ncia e a taxa r&aacute;pida de produ&ccedil;&atilde;o exigem que sejam empregues com efic&aacute;cia as tecnologias mais avan&ccedil;adas para realizar esses processos.&rdquo;</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+          <ul>
+              <li>
+                  <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>A unidade de propuls&atilde;o el&eacute;trica:</strong></u></p>
+              </li>
+          </ul>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Num ve&iacute;culo el&eacute;trico, o motor composto pelo rotor e pelo estator faz parte de uma unidade maior, a unidade de propuls&atilde;o el&eacute;trica, &eacute; um conjunto que faz funcionar o motor el&eacute;trico.</p>
+          <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-left: 1.27cm;margin-bottom: 0.28cm;line-height: 108%;">Tamb&eacute;m dentro desta unidade, o Controlador Eletr&oacute;nico de Pot&ecirc;ncia (CEP) re&uacute;ne todos os elementos eletr&oacute;nicos de pot&ecirc;ncia respons&aacute;veis por gerir a fonte de alimenta&ccedil;&atilde;o do motor e o carregamento da bateria. Por &uacute;ltimo, este tamb&eacute;m inclui o redutor, que &eacute; a parte respons&aacute;vel por ajustar o torque e a velocidade de rota&ccedil;&atilde;o transmitida pelo motor &agrave;s rodas. Juntos, estes elementos fazem com que o motor el&eacute;trico funcione de maneira suave e eficiente.</p>
           </div>
 
         </div>
@@ -196,18 +205,245 @@
 
       </div>
 
+    </div>
+
+
+    <!-- Comparações section-->
+    <div class="w3-container w3-padding-32" id="comparacoes">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Comparações</h3>
+      <div class="w3-bar w3-padding-16">
+        <button class="w3-bar-item w3-button w3-teal comparacoes-btn" style="width:33.3%">Elétrico/Combustão</button>
+        <button class="w3-bar-item w3-button w3-teal comparacoes-btn" style="width:33.3%">Hidrogénio/Elétrico</button>
+        <button class="w3-bar-item w3-button w3-teal comparacoes-btn" style="width:33.3%">Combustão/Hidrogénio</button>
+      </div>
+
+    <div id="eletrico/combustao">
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><strong>Motores el&eacute;tricos vs Motores a combust&atilde;o</strong></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Autonomia:</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">De acordo com uma pesquisa recente, a preocupa&ccedil;&atilde;o mais comum para potenciais compradores &eacute; a falta de autonomia, pois muitos se preocupam com a dist&acirc;ncia que os ve&iacute;culos el&eacute;tricos conseguem percorrer sem recarregar. No entanto, essa preocupa&ccedil;&atilde;o pode ser deixada de lado, visto que muitos modelos el&eacute;tricos mais recentes j&aacute; se comparam, em termos de autonomia, a um carro a gasolina comum, &agrave; medida que a performance continua a melhorar cada vez mais com o avan&ccedil;o da tecnologia.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Por exemplo, um carro movido a gasolina de gama m&eacute;dia pode alcan&ccedil;ar at&eacute; 482 km com um tanque de combust&iacute;vel cheio, enquanto a maioria dos modelos el&eacute;tricos tem um alcance de 200-490 km com uma &uacute;nica carga. Com base nos dados medidos pelo WLTP (<em>Worldwide Harmonised Light Vehicle Test Procedure</em>), os modelos el&eacute;tricos mais recentes, como o Hyundai Kawaii Electric (484 km), Chevrolet Bolt EV (459 km) e Kia e-Niro (455 km) j&aacute; oferecem autonomias semelhantes a um carro de combust&iacute;vel de gama m&eacute;dia. Para colocar as coisas em perspetiva, isso significa que se pode facilmente ir de Bruxelas a Paris (316 km) ou de Londres a Liverpool (350 km) sem paragens para carregar. Al&eacute;m disso, carros de luxo como o Tesla Model S Long-Range podem ir at&eacute; 610 km com uma carga completa, o que coloca uma viagem de Barcelona a Madrid na faixa de uma &uacute;nica carga. Um relat&oacute;rio do <em>Joint Research Centre</em> da Comiss&atilde;o Europeia mostra que a dist&acirc;ncia m&eacute;dia de condu&ccedil;&atilde;o por dia &eacute; entre 40 e 90 km, tornando os modelos el&eacute;tricos, at&eacute; os mais antigos, capazes de lidar com dist&acirc;ncias di&aacute;rias.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</strong></u> Bateria el&eacute;trica</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Emiss&otilde;es:</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Estudos recentes de carros el&eacute;tricos na Alemanha chegaram &agrave; conclus&atilde;o que os carros el&eacute;tricos s&atilde;o mais sustent&aacute;veis. Um estudo descobriu que as emiss&otilde;es dos carros el&eacute;tricos t&ecirc;m emiss&otilde;es at&eacute; 43% mais baixas do que os ve&iacute;culos a diesel. Outro detalhou que &ldquo;em todos os casos examinados, os carros el&eacute;tricos t&ecirc;m impactos clim&aacute;ticos ao longo da sua vida &uacute;til mais baixos do que aqueles com motores de combust&atilde;o interna&rdquo;.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Essas diferen&ccedil;as surgem dos pressupostos usados pelos pesquisadores. Como o Prof Jeremy Michalek, diretor do Grupo de Eletrifica&ccedil;&atilde;o de Ve&iacute;culos da <em>Carnegie Mellon University</em>, disse ao <em>Carbon Brief</em>, &ldquo;a tecnologia que sai por cima depende de muitas coisas&rdquo;. Isso inclui quais os ve&iacute;culos espec&iacute;ficos est&atilde;o a ser comparados, qual a mistura de rede el&eacute;trica &eacute; utilizada, se emiss&otilde;es marginais ou m&eacute;dias de eletricidade s&atilde;o usadas, quais os padr&otilde;es de condu&ccedil;&atilde;o normais e at&eacute; mesmo o clima.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">A figura abaixo, adaptada de uma an&aacute;lise do <em>International Council for Clean Transportation</em> (ICCT), mostra uma estimativa das emiss&otilde;es do ciclo de vida de um carro convencional europeu t&iacute;pico (motor de combust&atilde;o interna), o carro convencional h&iacute;brido com a melhor economia de combust&iacute;vel dispon&iacute;vel (um 2019 Toyota Prius Eco), e um ve&iacute;culo el&eacute;trico Nissan Leaf para v&aacute;rios pa&iacute;ses, bem como a m&eacute;dia da UE. [The Leaf foi o EV mais vendido na Europa em 2018.]</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">O gr&aacute;fico inclui emiss&otilde;es do tubo de escape (cinza), emiss&otilde;es do ciclo de combust&iacute;vel (laranja) - que inclui a produ&ccedil;&atilde;o de petr&oacute;leo, transporte, refino e gera&ccedil;&atilde;o de eletricidade - emiss&otilde;es da fabrica&ccedil;&atilde;o de componentes que n&atilde;o s&atilde;o da bateria do ve&iacute;culo (azul-escuro) e uma estimativa conservadora das emiss&otilde;es da fabrica&ccedil;&atilde;o da bateria (azul claro).</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</strong></u> Bateria el&eacute;trica</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Custo de posse</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Baseado no estudo da revista <em>CarAndDriver</em>, um Mini movido a gasolina &eacute; apenas $358 (292,80&euro;) mais barato de comprar e operar nos primeiros tr&ecirc;s anos do que seu equivalente el&eacute;trico - essencialmente uma lavagem. O Kawaii Electric, por outro lado, &eacute; mais caro do que a vers&atilde;o a gasolina em $7994 (6538,17&euro;). De seguida, &eacute; preciso ter em conta os incentivos estaduais e locais, se estiverem dispon&iacute;veis. Al&eacute;m disso, com o passar dos anos, o menor custo de opera&ccedil;&atilde;o de um ve&iacute;culo el&eacute;trico (combust&iacute;vel e manuten&ccedil;&atilde;o) continua a aumentar. No caso do Mini, pode ser apenas uma vantagem para o modelo el&eacute;trico.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">O problema atual &eacute; que nem todos os novos EVs s&atilde;o eleg&iacute;veis para o incentivo do governo americano de $7500 (6134,14&euro;). Ambas a Tesla e a GM atingiram o limite de 200.000 ve&iacute;culos. Tamb&eacute;m &eacute; improv&aacute;vel que o atual governo aumente esse limite t&atilde;o cedo. Eventualmente, outras marcas de autom&oacute;veis tamb&eacute;m perder&atilde;o a capacidade de usar esse incentivo federal como uma forma de aliciar clientes.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">A outra quest&atilde;o complicada &eacute; que comparar ve&iacute;culos el&eacute;tricos e ve&iacute;culos a gasolina n&atilde;o &eacute; uma compara&ccedil;&atilde;o direta para a maioria dos carros el&eacute;tricos na estrada. N&atilde;o h&aacute; um Tesla Model 3 ou um Ford Mustang Mach-E com uma motoriza&ccedil;&atilde;o a gasolina. Os compradores devem compar&aacute;-los com ve&iacute;culos a g&aacute;s aproximadamente semelhantes. Quando fizer isso, os c&aacute;lculos para ver qual das op&ccedil;&otilde;es oferece o melhor retorno para o seu investimento podem causar ainda mais dores de cabe&ccedil;a do que o que tentamos aqui.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</strong></u> Empate</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Veredito</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Apesar de a tecnologia el&eacute;trica j&aacute; ter sido desenvolvida a um ponto em que se pode comparar a um carro a combust&iacute;vel normal, ainda &eacute; poss&iacute;vel que esta tecnologia consiga superar por completo os motores de combust&atilde;o interna, apesar de demorarem mais tempo a &ldquo;encher o dep&oacute;sito&rdquo;. Este vai ser um grande passo na dire&ccedil;&atilde;o de tornar a mobilidade muito mais sustent&aacute;vel e amiga do ambiente. &Eacute; poss&iacute;vel acreditar que os carros el&eacute;tricos v&atilde;o substituir completamente os motores a combust&atilde;o, uma vez que por enquanto oferecem mais vantagens que as outras alternativas mais sustent&aacute;veis presentes no mercado.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</strong></u> bateria el&eacute;trica.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><br>&nbsp;</p>
+    </div>
+
+    <div id="hidrogenio/eletrico">
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><strong>Motores elétricos vs Motores a hidrogénio</strong></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Autonomia:</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">A autonomia depende bastante do veículo comprado e a regra geral de obtém-se por aquilo que se pagou, aplica-se neste parâmetro.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Os carros elétricos produzidos em massa, que são mais caros, tendem a oferecer uma autonomia de bateria de cerca de 482 quilómetros. Por exemplo, o Tesla Model S Long Range com o preço de 90.990,00€ tem um alcance de 603 quilómetros.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Outros carros, no entanto, podem custar significativamente menos, mas oferecem metade do alcance. O Nissan Leaf Acenta, por exemplo, cujo preço ronda os 26.400,00€ e uma autonomia de 241 quilómetros, diz segundo a fonte BuyACar.</p>
+      <div class="w3-center">
+          <img src="https://www.autodevot.com/wp-content/uploads/2020/06/Tesla-Model-S-Long-Range-Plus-with-Tempest-Wheels.jpg" alt="tesla" width="35%">
+          <img src="https://www.nissan-toulouse-labege.fr/picserver1/userdata/1/38540/WpjUuhdtDr/leaf-1120x624.png" alt="tesla" width="35%">
+          <img src="https://s.aolcdn.com/commerce/autodata/images/USC90HYS171A021001.jpg" alt="tesla" width="25%">
+      </div>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Os veículos com célula de combustível a hidrogénio tendem a ser mais económicos do que seus equivalentes elétricos a bateria.
+      De acordo com o site Autocar, o Hyundai Nexo vem com uma autonomia real de 666 quilómetros e encher o depósito demora apenas cinco minutos, enquanto o carregamento elétrico pode durar uma hora na melhor das hipóteses. Como os veículos com célula de combustível a hidrogénio são ainda muito recentes, não há modelos com orçamento limitado no mercado. Mas, no que toca a autonomia, o hidrogénio parece ter a vantagem.</p>
+
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Emissões</strong></u></p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">É um equívoco comum pensar que carros elétricos e a hidrogénio têm zero emissões. Embora nenhum gás seja emitido pelo seu tubo de escape, o processo de fabricação para os dois tipos de veículos ainda resulta na libertação de  para a atmosfera.
+      Jon Hunt, chefe de comercialização de carros com célula de combustível de hidrogénio da Toyota, numa entrevista à Auto Express que fabricar uma bateria de iões de lítio para um carro elétrico é um processo "muito intensivo em energia".</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">“Por exemplo, uma bateria de 100 kWh tem um alcance de 402 quilómetros e, para produzir esta bateria, serão necessárias cerca de 20 toneladas de ”, disse ele. “Uma bateria típica dura 241.401,00 quilómetros, o que equivale a cerca de 83g/km de . Então, quando é tido em conta o carregamento para a mesma distância, o mesmo carro a bateria de lítio fornecerá 124g/km de  ao longo de sua vida”.
+      Em comparação, a Auto Express afirma após um estudo recente descobriu que o carro Toyota Mirai com célula de combustível a hidrogénio produz cerca de 120g / km de  durante sua vida útil, quando o processo de fabricação é tido em consideração. Mas se o hidrogénio fosse produzido utilizando energias renováveis, esse número poderia ser reduzido significativamente.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Os veículos com célula de combustível a hidrogénio têm os seus céticos, incluindo o chefe da Tesla, Elon Musk.
+      Em 2017, o empresário da área tecnológica criticou os carros de célula de combustível a hidrogénio por serem “incrivelmente estúpidos” e alcunhou-os de “células tolas”, de acordo com a emissora norte-americana CNBC.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">O presidente da Toyota, Takeshi Uchiyamada, concordou notavelmente com Musk na época. Em entrevista à Reuters, ele disse que “é melhor carregar o carro elétrico, ligando-o diretamente à tomada”, mas acrescentou que as duas tecnologias seriam necessárias para ultrapassar os veículos movidos a gasolina.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</u></strong> empate (por enquanto)</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Custo de posse</strong></u></p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Os veículos elétricos não são os carros mais baratos à venda. Por exemplo, um novo Jaguar I-Pace está avaliado em cerca de 82.000€. Embora exista um incentivo para a compra de carros elétricos em Portugal, não são elegíveis veículos cujo custo final de aquisição seja superior a 62.500€, incluindo IVA e todas as despesas associadas.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">No entanto, o Renault Zoe pode ser adquirido por cerca de 34.740€ segundo o site BuyACar. Mas os clientes precisam ter em consideração o aluguer da bateria, que custa pelo menos 56€ por mês, e que a autonomia do veículo será um pouco menor do que um veículo com motor de combustão convencional ou um modelo mais caro como o Jaguar I-Pace.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Os clientes, no entanto, economizam dinheiro na cobrança. A revista Car diz que um carregamento da bateria completamente descarregada até completamente carregada usando um dos carregadores de estrada do Reino Unido, deve custar cerca de £ 35 (40€) para uma bateria de 100 kWh, enquanto uma fonte de alimentação doméstica desce esse valor para cerca de £ 12 (14€).</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Mas se acredita que manter um carro elétrico era caro, pense novamente. Os carros a hidrogénio não são apenas mais caros nos termos de preço de compra, mas também quando se trata de abastecê-los com hidrogénio.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Um Hyundai Nexo (não vendido em Portugal), por exemplo, custa £ 66.000 (76.045,69€) após a concessão do governo do Reino Unido. Apesar de esse valor não ser superior ao do Jaguar I-Pace, um tanque cheio de um carro a hidrogénio pode custar entre £ 50 (57,61€) e £ 75 (86,42€), observa o RAC.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</strong></u> bateria elétrica</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Veredito</strong></u></p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Embora os carros elétricos pareçam ter a vantagem nos dias de hoje, vários fabricantes ainda estão comprometidos com os carros com célula de combustível a hidrogénio - o que significa que a tecnologia pode um dia encontrar o seu lugar no mundo do automobilismo.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">O site de notícias de tecnologia verde CleanTechnica afirma que os carros com célula de combustível a hidrogénio estão "vários anos atrás dos veículos elétricos em termos de inovação", razão pela qual são tão caros para comprar e manter.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Com tempo e dinheiro suficientes, os veículos a hidrogénio podem tornar-se a opção mais acessível para “os nossos filhos ou netos”, diz o site. Mas os carros elétricos também estão a evoluir a um ritmo rápido, e opções de bateria mais ecológicas podem surgir no futuro.</p>
+            <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Por enquanto, os carros elétricos parecem ser o meio de transporte ideal para aqueles que procuram fazer sua parte na redução da sua pegada ecológica.</p>
 
     </div>
+
+    <div id="combustao/hidrogenio">
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><strong>Motores a Hidrogénio vs Motores a Combustão</strong></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Autonomia</u></strong></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Apesar de ser uma tecnologia bastante recente e não muito desenvolvida, os veículos movidos a células de hidrogénio, como por exemplo o novo Hyundai Nexo, que consome apenas 1kg de hidrogénio por 100km. A tecnologia de hidrogénio é uma das mais eficientes no mundo, e em apenas 5 minutos é possível reabastecer os tanques de hidrogénio que vão permitir percorrer até 650 km. Desta forma, veículos movidos a células de hidrogénio apresentam uma autonomia não só mais elevada que os carros elétricos, como equiparáveis a carros com motores de combustão interna a diesel (que geralmente possuem uma autonomia de 650km, dependendo do carro, do quanto gasta por 100km, e do seu depósito).</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Logo, não há nenhum carro que entre os dois tenha uma vantagem, pois em termos de autonomia ambos são bastante semelhantes.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</u></strong> Empate</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Emissões</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Segundo a Blue Academy da Hyundai, os carros a hidrogénio não só têm 0 emissões de CO2, como também purificam o ar, pois libertam água e uma mistura de oxigénio e hidrogénio para o ar, tendo assim 0 emissões que possam poluir o ar ou contribuir para o efeito de estufa, sendo uma opção mais ecológica do que não só carros a combustíveis fósseis, como carros elétricos. Por outro lado, apesar de carros a hidrogénio não libertarem gases poluentes à primeira vista, ao investigar-se o processo de formação de hidrogénio para a produção de células de hidrogénio, nota-se que, quer seja pelo eletrólise da água, quer seja pela sua extração de combustíveis fósseis, é necessária muita energia; algumas fontes como a TWI afirma que a quantidade de energia necessária para produzir hidrogénio, em alguns casos, supera a energia que o hidrogénio formado irá produzir.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Auto Express afirma que um estudo recente descobriu que um carro (Toyota Mirai) com célula de combustível a hidrogénio produz cerca de 120g / km de CO2 durante sua vida útil, quando o processo de fabricação é tido em consideração, e um carro movido a combustíveis fósseis produz 180.9 g/ km de CO2 em média.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Desta forma, apesar dos carros movidos a combustíveis fósseis libertarem muitos gases poluentes, os carros a hidrogénio também os libertam, embora não em quantidade tão elevada.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</strong></u> Hidrogénio</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Custo de posse	</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Carros a combustíveis fósseis, dependendo do seu uso e qualidade, podem variar o seu preço de manutenção, mas em média, a manutenção de um carro sai por volta de 0.300€/km, segundo a AutoCustos.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Carros que utilizam células de hidrogénio possuem menos peças que possam ser desgastadas, (mas continuam a ter a maior parte da suspensão comum aos carros elétricos e aos de combustão interna) sendo o seu preço de manutenção relativamente baixo comparado carros de combustão interna.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Logo, em termos de preço de manutenção, um carro a células de hidrogénio é mais económico. Por outro lado, o custo de aquisição é, sem margem para dúvidas, mais elevado do que um carro médio a gasolina ou gasóleo. Tomemos como exemplo o Hyundai Nexo (não vendido em Portugal), que tem o preço base de $60,120.00 (aproximadamente 50,000.00€) enquanto um outro SUV, o Volkswagen Tiguan, tem um custo base de 40,443.00€.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor:</u></strong> Combustão interna</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Veredito</strong></u></p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Apesar de os motores a hidrogénio estarem a ser desenvolvidos cada vez mais rapidamente e serem muito mais ecológicos em termo de emissões, continuam a não conseguir superar os seus rivais com motorizações a gasolina ou diesel. Como a tecnologia das células de hidrogénio ainda é bastante recente e obviamente ainda se encontra nos seus primórdios, é normal que este tipo de tecnologia seja inferior à tecnologia dos motores a combustão, que têm quase um século de progresso e desenvolvimento.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Vemos por parte de algumas conhecidas marcas um investimento no hidrogénio, para além de que algumas marcas menos conhecidas ou recém-nascidas, como o caso de uma empresa chamada Hyperion que acredita conseguir produzir um carro, a partir de 2022, (Hyperion XP-1) que consiga competir com um Bugatti Chiron, o atual carro mais rápido do mundo. </p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">Para além disso marcas como a BMW estão convencidas de que o hidrogénio pode dar uma contribuição importante para a mobilidade sustentável juntamente com os veículos elétricos no futuro - desde que a infraestrutura de hidrogénio necessária esteja instalada e ofereça um bom preço para o combustível, e o preço dos veículos desça. Nessas circunstâncias, os carros com célula de combustível de hidrogénio podem ser a tecnologia com zero emissões que permite aos proprietários manter os hábitos de condução flexíveis aos quais estão acostumados.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;">O Hydrogen Council, uma iniciativa global das principais empresas de energia, transporte e indústria, também está convencido disso. O conselho vê o hidrogénio não apenas como um futuro meio sustentável de propulsão para veículos com células de combustível, mas também como uma fonte de energia limpa para aquecimento, eletricidade e indústria.</p>
+      <p style="text-align: justify;background: transparent none repeat scroll 0% 0%;margin-bottom: 0.28cm;line-height: 108%;"><u><strong>Vencedor final:</strong></u> Combustão interna </p>
+
+    </div>
+
+    </div>
+
+
 
     <!-- Modelos Section -->
     <div class="w3-container w3-padding-32" id="modelos">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Modelos</h3>
       <div class="w3-bar w3-padding-16">
-        <button class="w3-bar-item w3-button w3-teal motor-btn" style="width:33.3%">Carro Bateria Lítio</button>
-        <button class="w3-bar-item w3-button w3-teal motor-btn" style="width:33.3%">Carro a Batata</button>
-        <button class="w3-bar-item w3-button w3-teal motor-btn" style="width:33.3%">O nosso Motor</button>
+        <button class="w3-bar-item w3-button w3-teal modelos-btn" style="width:33.3%">Carro Bateria Lítio</button>
+        <button class="w3-bar-item w3-button w3-teal modelos-btn" style="width:33.3%">Carro a Batata</button>
+        <button class="w3-bar-item w3-button w3-teal modelos-btn" style="width:33.3%">O nosso Motor</button>
+      </div>
+
+    <div id="litio">
+      <div class="w3-animate-opacity w3-center">
+        <img src="img/rlitio.png" alt="" width="75%">
+        <img src="img/rlitio2.png" alt="" width="75%">
+        <img src="img/rlitio3.png" alt="" width="75%">
       </div>
     </div>
+
+    <div id="batata">
+      <div class="w3-animate-opacity w3-center">
+        <img src="img/rbatata.png" alt="" width="75%">
+        <img src="img/rbatata2.png" alt="" width="75%">
+        <img src="img/rbatata3.png" alt="" width="75%">
+      </div>
+    </div>
+
+    <div id="nosso_motor">
+      <div class="w3-animate-opacity w3-center">
+        <img src="img/rmotor.png" alt="" width="75%">
+        <img src="img/rmotor2.png" alt="" width="75%">
+      </div>
+    </div>
+
+    </div>
+
+    <!-- Galeria -->
+
+    <div class="w3-container w3-padding-32" id="galeria">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Galeria</h3>
+
+      <div class="w3-row-padding w3-margin-top">
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="img/galeria7.jpeg" style="width:100%">
+            <div class="w3-container">
+              <h5 style="text-align:center;">A nossa <i>Árvore de Cames</i></h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="img/galeria2.jpeg" style="width:100%">
+            <div class="w3-container">
+              <h5 style="text-align:center;">Conjunto de peças do motor</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="img/galeria3.jpeg" style="width:100%">
+            <div class="w3-container">
+              <h5 style="text-align:center;">Supercondensador 5.5V 0.22F</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-row-padding w3-margin-top">
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="img/galeria1.jpg" style="width:100%">
+            <div class="w3-container">
+              <h5 style="text-align:center">O nosso motor concluído</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="img/galeria4.jpeg" style="width:100%">
+            <div class="w3-container">
+              <h5 style="text-align:center">Primeira versão (fracassada) do carro a Batata</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="img/galeria5.jpg" style="width:100%">
+            <div class="w3-container">
+              <h5 style="text-align:center;">Versão final do carro a Batata</h5>
+            </div>
+          </div>
+        </div>
+
+
+              <div class="w3-row-padding w3-margin-top">
+                <div class="w3-third">
+                  <div class="w3-card">
+                    <img src="img/galeria6.jpeg" style="width:100%">
+                    <div class="w3-container">
+                      <h5 style="text-align:center;">Carro a bateria de lítio</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w3-third">
+                  <div class="w3-card">
+                    <iframe width="100%" src="https://www.youtube.com/embed/rYM66jQkqJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="w3-container">
+                      <h5>Teste da bobine</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w3-third">
+                  <div class="w3-card">
+                    <iframe width="100%" src="https://www.youtube.com/embed/QB7MJVwn4TU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="w3-container">
+                      <h5>Teste do Supercondensador</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+      </div>
+
+
+    </div>
+
+
 
     <!-- Sobre Nós Section -->
     <div class="w3-container w3-padding-32" id="sobre">
@@ -222,11 +458,10 @@
           <div id="margin">
             <h2><b>Bem vindos ao projeto Batat-eiros!</b></h2>
             <p>Esta ideia vem do seguimento do desenvolvimento do projeto final de ano de Física, desta forma, este site como parte integrante deste, está vocacionado para a área dos diferentes tipos de motores existentes nos dias de hoje: motor a hidrogénio, motor elétrico e motor a combustão. Assim, o nosso foco é ampliar o conhecimento do leitor nesta área, de uma forma interativa e interessante.</p>
-            <p>Partilhamos os seguintes valores, que constituem o pilar da relação com a comunidade: somos persistentes, gostamos de inovar, aprendemos com os erros, especificamente num projeto na área de Física, além disso queremos proporcionar a melhor experiência ao utilizador.</p>
+            <p>Partilhamos os seguintes valores, que constituem o pilar da relação com a comunidade: somos persistentes, gostamos de inovar, aprendemos com os erros, especificamente num projeto na área de Física. Além disso, queremos proporcionar a melhor experiência ao utilizador.</p>
             <p>E o melhor!</p>
-            <p>Temos tal como os visitantes deste site a paixão pelos desportos motorizados e o interesse pela física. No Batat-eiros site vai encontrar a comparação entre os diferentes motores, os relatórios das nossas experiências, nomeadamente do carro com bateria de lítio, e muito mais…</p>
-            <p>Não percas tempo, e navega pelo nosso site e de te juntares a esta equipa de físicos.</p>
-            <p>Aproveita a oportunidade de conhecer a nossa equipa:</p>
+            <p>Temos tal como os visitantes deste site a paixão pelos desportos motorizados e o interesse pela física. No nosso site vai encontrar a comparação entre os diferentes motores, os relatórios das nossas experiências, nomeadamente do carro com bateria de lítio, e muito mais…</p>
+            <p>Não percas tempo, navega pelo nosso site e descobre tudo sobre o nosso projeto.</p>
             <br>
             <p>De físicos para físicos!</p>
 
