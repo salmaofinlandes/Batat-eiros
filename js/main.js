@@ -1,5 +1,5 @@
 
-var slideIndex = 1;
+var slideIndex = 2;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -111,3 +111,99 @@ combustao.onclick = function(){changeCombustao()}
 hidrogenio.onclick = function(){changeHidrogenio()}
 
 // END MOTOR SECTION
+
+// COMPARACOES SECTION
+
+var eletcomb = document.getElementsByClassName("comparacoes-btn")[0]
+var hidroelet = document.getElementsByClassName("comparacoes-btn")[1]
+var combhidro = document.getElementsByClassName("comparacoes-btn")[2]
+
+document.getElementById("eletrico/combustao").style.display = "none";
+document.getElementById("combustao/hidrogenio").style.display = "none";
+
+eletcomb.style.opacity = 0.4;
+combhidro.style.opacity = 0.4;
+
+eletcomb.onclick = function(){changeEletComb()}
+hidroelet.onclick = function(){changeHidroElet()}
+combhidro.onclick = function(){changeCombHidro()}
+
+
+
+function changeEletComb(){
+  eletcomb.style.opacity=1;
+  hidroelet.style.opacity=0.4;
+  combhidro.style.opacity=0.4;
+  document.getElementById("eletrico/combustao").style.display="block";
+  document.getElementById("hidrogenio/eletrico").style.display="none";
+  document.getElementById("combustao/hidrogenio").style.display="none";
+  document.getElementById("comparacoes").scrollIntoView();
+}
+
+function changeHidroElet(){
+  eletcomb.style.opacity=0.4;
+  hidroelet.style.opacity=1;
+  combhidro.style.opacity=0.4;
+  document.getElementById("eletrico/combustao").style.display="none";
+  document.getElementById("hidrogenio/eletrico").style.display="block";
+  document.getElementById("combustao/hidrogenio").style.display="none";
+  document.getElementById("comparacoes").scrollIntoView();
+}
+function changeCombHidro(){
+  eletcomb.style.opacity=0.4;
+  hidroelet.style.opacity=0.4;
+  combhidro.style.opacity=1;
+  document.getElementById("eletrico/combustao").style.display="none";
+  document.getElementById("hidrogenio/eletrico").style.display="none";
+  document.getElementById("combustao/hidrogenio").style.display="block";
+  document.getElementById("comparacoes").scrollIntoView();
+}
+
+
+
+// MODELOS SECTION
+
+var litio = document.getElementsByClassName("modelos-btn")[0]
+var batata = document.getElementsByClassName("modelos-btn")[1]
+var nosso_motor = document.getElementsByClassName("modelos-btn")[2]
+
+document.getElementById("litio").style.display = "none";
+document.getElementById("nosso_motor").style.display = "none";
+
+litio.style.opacity = 0.4;
+nosso_motor.style.opacity = 0.4;
+
+litio.onclick = function(){changeLitio()}
+batata.onclick = function(){changeBatata()}
+nosso_motor.onclick = function(){changeNossoMotor()}
+
+
+
+function changeLitio(){
+  litio.style.opacity=1;
+  batata.style.opacity=0.4;
+  nosso_motor.style.opacity=0.4;
+  document.getElementById("nosso_motor").style.display="none";
+  document.getElementById("batata").style.display="none";
+  document.getElementById("litio").style.display="block";
+  document.getElementById("modelos").scrollIntoView();
+}
+
+function changeBatata(){
+  litio.style.opacity=0.4;
+  batata.style.opacity=1;
+  nosso_motor.style.opacity=0.4;
+  document.getElementById("nosso_motor").style.display="none";
+  document.getElementById("batata").style.display="block";
+  document.getElementById("litio").style.display="none";
+  document.getElementById("modelos").scrollIntoView();
+}
+function changeNossoMotor(){
+  litio.style.opacity=0.4;
+  batata.style.opacity=0.4;
+  nosso_motor.style.opacity=1;
+  document.getElementById("nosso_motor").style.display="block";
+  document.getElementById("batata").style.display="none";
+  document.getElementById("litio").style.display="none";
+  document.getElementById("modelos").scrollIntoView();
+}
